@@ -1,5 +1,6 @@
 import React from "react";
 import { capitalize } from "lodash";
+import { useNavigation } from "@react-navigation/native";
 import {
   Text,
   View,
@@ -10,12 +11,13 @@ import {
 import getColorByPokemonType from "../utils/getColorByPokemonType";
 function PokemonCard(props) {
   const { pokemon } = props;
+  const navigation = useNavigation();
 
   const pokemonColor = getColorByPokemonType(pokemon.type);
   const bgStyles = { backgroundColor: pokemonColor, ...style.bgStyles };
 
   const goToPokemon = () => {
-    console.log("hola");
+    navigation.navigate("Pokemon", { id: pokemon.id });
   };
 
   return (

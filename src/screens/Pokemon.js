@@ -2,9 +2,10 @@ import React from "react";
 import { Text, View } from "react-native";
 
 function Pokemon(props) {
+  const { navigation, route } = props;
   return (
     <View>
-      <Text>Pokemos</Text>
+      <Text>{route.params.id}</Text>
     </View>
   );
 }
