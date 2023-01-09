@@ -16,7 +16,7 @@ function Type(props) {
             backgroundColor: getColorByPokemonType(item.type.name),
           }}
         >
-          <Text>{capitalize(item.type.name)}</Text>
+          <Text style={styles.name}>{capitalize(item.type.name)}</Text>
         </View>
       ))}
     </View>
@@ -36,6 +36,9 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginHorizontal: 10,
     borderRadius: Platform.OS === "android" ? 200 : 0,
+  },
+  name: {
+    color: "#fff",
   },
 });
 
