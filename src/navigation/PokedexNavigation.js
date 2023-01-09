@@ -20,7 +20,11 @@ function PokedexNavigation(props) {
       <stack.Screen
         name="Pokemon"
         component={Pokemon}
-        options={{ title: "Pokemon", headerTitleAlign: "center" }}
+        options={{
+          title: "",
+          headerTitleAlign: "center",
+          headerTransparent: true,
+        }}
       />
     </stack.Navigator>
   );
