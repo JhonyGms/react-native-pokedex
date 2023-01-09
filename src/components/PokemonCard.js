@@ -1,4 +1,5 @@
 import React from "react";
+import { capitalize } from "lodash";
 import {
   Text,
   View,
@@ -25,7 +26,7 @@ function PokemonCard(props) {
             <Text style={style.number}>
               #{`${pokemon.order}`.padStart(3, 0)}
             </Text>
-            <Text style={style.name}>{pokemon.name}</Text>
+            <Text style={style.name}>{capitalize(pokemon.name)}</Text>
             <Image source={{ uri: pokemon.image }} style={style.image} />
           </View>
         </View>
